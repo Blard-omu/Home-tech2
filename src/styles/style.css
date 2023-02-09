@@ -141,3 +141,8 @@ main {
   background-color: #0076a7;
   color: white;
 }
+
+.colors.active {
+  border: 2px solid black;
+  border-radius: 50%;
+}
