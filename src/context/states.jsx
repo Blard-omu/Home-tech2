@@ -107,12 +107,12 @@ export const StateProvider = ({ children }) => {
     //     if (userDetails.fullName == "") {
     //       setErrorMessage({
     //         ...errorMessage,
-    //         fullName: "Enter your name",
+    //         fullName: "Name is required!",
     //       });
     //     } else if (userDetails.email == "") {
     //       setErrorMessage({
     //         ...errorMessage,
-    //         email: "Enter your email",
+    //         email: "Email is required!",
     //       });
     //     } else if (userDetails.password == "") {
     //       setErrorMessage({

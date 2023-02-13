@@ -62,7 +62,7 @@ const Create = () => {
         </div>
         <small>
           Already have an account
-          <span className="text-color-primary">Sign In</span>
+          <span className="text-color-primary ps-2 fw-bold">Sign In</span>
         </small>
       </div>
     </div>

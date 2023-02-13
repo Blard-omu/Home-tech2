@@ -14,10 +14,12 @@ const Form = () => {
     handlePageMoveForward,
     handlePageMoveBackword,
     resetColors,
+    colors,
   } = useContext(StateContext);
 
   return (
     <form
+      className=" position-relative ps-3 pe-3"
       onSubmit={(e) => {
         e.preventDefault();
         // handleRegister(userDetails);
@@ -26,27 +28,31 @@ const Form = () => {
         handlePageMoveForward();
       }}
     >
-      <h1 className="text-color-primary position-relative">
-        <img
-          style={{
-            width: "30px",
-            position: "absolute",
-            left: "10px",
-            top: "5px",
-          }}
-          className={pageIndex === 0 ? "d-none" : "arrow-left"}
-          src={arrowLeft}
-          alt="arrow"
-          onClick={() => {
-            handlePageMoveBackword();
-          }}
-        />
-        {pageTitle[pageIndex].heading}
-      </h1>
+      <img
+        style={{
+          width: "20px",
+          position: "absolute",
+          left: "-1%",
+          top: "15px",
+        }}
+        className={pageIndex === 0 ? "d-none" : "arrow-left"}
+        src={arrowLeft}
+        alt="arrow"
+        onClick={() => {
+          handlePageMoveBackword();
+        }}
+      />
+      <h1 className="text-color-primary">{pageTitle[pageIndex].heading}</h1>
       <p>{pageTitle[pageIndex].detail}</p>
       <Progress />
       <CurPage />
-      <button className="btn-p">{pageTitle[pageIndex].buttonText}</button>
+      <button
+        // disabled={pageIndex == 2 && colors.length < 2 ? false : true}
+        // disabled={false}
+        className="btn-p"
+      >
+        {pageTitle[pageIndex].buttonText}
+      </button>
       <button
         onClick={() => {
           resetColors();

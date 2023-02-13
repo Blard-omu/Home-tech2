@@ -128,7 +128,7 @@ main {
   transition: 0.5s ease-in-out;
 }
 .form-progress small.active::after {
-  padding: 1px 110%;
+  padding: 1px 80%;
 }
 
 /* .form-progress small:nth-of-type(1) */
@@ -145,4 +145,15 @@ main {
 .colors.active {
   border: 2px solid black;
   border-radius: 50%;
+}
+
+@media (min-width: 380px) {
+  .form-progress small.active::after {
+    padding: 1px 120%;
+  }
+}
+@media (min-width: 480px) {
+  .form-progress small.active::after {
+    padding: 1px 140%;
+  }
 }
