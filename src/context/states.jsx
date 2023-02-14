@@ -77,7 +77,7 @@ export const StateProvider = ({ children }) => {
       .then((res) => {
         console.log(res);
         setData(res.data);
-        if (res.data.success == true) {
+        if (res.data.success === true) {
           setPageIndex(pageIndex + 1);
         }
         setLoading(false);
@@ -133,7 +133,7 @@ export const StateProvider = ({ children }) => {
   };
 
   const handlePageMoveBackword = () => {
-    if (pageIndex == 0) {
+    if (pageIndex === 0) {
       return;
     } else {
       setPageIndex(pageIndex - 1);
