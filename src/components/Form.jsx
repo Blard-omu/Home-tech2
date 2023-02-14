@@ -57,7 +57,7 @@ const Form = () => {
         onClick={() => {
           resetColors();
         }}
-        className={pageIndex == 2 ? "btn-s" : "d-none"}
+        className={pageIndex === 2 ? "btn-s" : "d-none"}
         style={{ border: "none" }}
       >
         Reset

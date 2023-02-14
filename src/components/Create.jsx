@@ -21,7 +21,7 @@ const Create = () => {
             value={userDetails.fullName}
           />
           <small
-            className={errorMessage.fullName == "" ? "d-none" : "error-danger"}
+            className={errorMessage.fullName === "" ? "error-danger" : "error-danger"}
           >
             {errorMessage.fullName}
           </small>
